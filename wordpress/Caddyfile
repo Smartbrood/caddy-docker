@@ -1,4 +1,4 @@
-:80
+xn--2017-44dgancsm2e7f.xn--p1ai
 root /var/www/html
 gzip
 fastcgi / wordpress:9000 php
