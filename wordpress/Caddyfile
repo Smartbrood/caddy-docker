@@ -1,10 +1,12 @@
-xn--2017-44dgancsm2e7f.xn--p1ai
-root /var/www/html
-gzip
-fastcgi / wordpress:9000 php
-rewrite {
-    if {path} not_match ^\/wp-admin
-    to {path} {path}/ /index.php?_url={uri}
+0.0.0.0:80 {
+	tls off
+	root /var/www/html
+	gzip
+	fastcgi / wordpress:9000 php
+	rewrite {
+		if {path} not_match ^\/wp-admin
+		to {path} {path}/ /index.php?_url={uri}
+	}
+	log stdout
+	errors stderr
 }
-log stdout
-errors stderr
