@@ -1,9 +1,24 @@
-0.0.0.0:80 {
-	tls off
+xn--2017-44dgancsm2e7f.xn--p1ai:80 {
+        tls off
+	redir https://xn--2017-44dgancsm2e7f.xn--p1ai{uri}
+        log stdout
+        errors stderr
+}
+
+xn--2017-44dgancsm2e7f.xn--p1ai:443 {
+	tls on
+	gzip
         proxy / wordpress.smartbrood.net:8080 {
                 policy round_robin
                 transparent
-	}
+        }
+	log stdout
+	errors stderr
+}
+
+0.0.0.0:80 {
+	tls off
+        status 404 /
 	log stdout
 	errors stderr
 }
