@@ -1,6 +1,9 @@
 0.0.0.0:80 {
 	tls off
-        proxy / wordpress.smartbrood.net:8080
+        proxy / wordpress.smartbrood.net:8080 {
+                policy round_robin
+                transparent
+	}
 	log stdout
 	errors stderr
 }
