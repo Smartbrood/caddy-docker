@@ -1,0 +1,6 @@
+0.0.0.0:80 {
+	tls off
+        proxy / wordpress.smartbrood.net:8080
+	log stdout
+	errors stderr
+}
