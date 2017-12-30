@@ -6,7 +6,7 @@ xn--2017-44dgancsm2e7f.xn--p1ai:80 {
 }
 
 xn--2017-44dgancsm2e7f.xn--p1ai:443 {
-	tls on
+	tls andreynpetrov@gmail.com
 	gzip
         proxy / wordpress.smartbrood.net:8080 {
                 policy round_robin
