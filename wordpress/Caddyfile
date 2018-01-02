@@ -2,7 +2,9 @@
 	tls off
 	root /var/www/html
 	gzip
-	fastcgi / wordpress:9000 php
+	fastcgi / wordpress:9000 php {
+                env HTTPS 1
+	}
 	rewrite {
 		if {path} not_match ^\/wp-admin
 		to {path} {path}/ /index.php?_url={uri}
