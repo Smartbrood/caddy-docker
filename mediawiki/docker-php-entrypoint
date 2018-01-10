@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+
+envsubst '$HOSTNAME,$PORT' < /etc/Caddyfile.template > /etc/Caddyfile
+
+exec "$@"
