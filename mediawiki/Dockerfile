@@ -38,5 +38,5 @@ COPY Caddyfile.template /etc/Caddyfile.template
 
 ENTRYPOINT ["docker-php-entrypoint"]
 
-CMD [""/usr/bin/caddy", ""--conf", "/etc/Caddyfile", "--log", "stdout"]
+CMD [""/usr/bin/caddy", "--conf", "/etc/Caddyfile", "--log", "stdout"]
 
