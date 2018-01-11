@@ -16,6 +16,7 @@
         if {path} not_starts_with /w/index.php
         if {path} not_starts_with /w/api.php
         if {path} not_starts_with /w/load.php
+        if {path} not_starts_with /w/mw-config
         to /w/index.php?title={1}
     }
 
