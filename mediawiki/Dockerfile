@@ -18,7 +18,8 @@ LABEL caddy_version="0.10.10"
 
 RUN apk add --no-cache \
         openssh-client \
-        gettext
+        gettext \
+        git
 
 # install caddy
 COPY --from=builder /install/caddy /usr/bin/caddy
